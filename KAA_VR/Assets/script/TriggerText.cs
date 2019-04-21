@@ -5,7 +5,11 @@ using UnityEngine;
 public class TriggerText : MonoBehaviour {
 
 	public void showText() {
-		GetComponent<MeshRenderer>().enabled = true;
+		if (GetComponent<MeshRenderer>().enabled == false)
+			GetComponent<MeshRenderer>().enabled = true;
+		else {
+			GetComponent<MeshRenderer>().enabled = false;
+		}
 	}
 
 }
